@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>common-icons/direction-right</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Backlog" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(-252.000000, -377.000000)" id="Sprint-Folded" stroke="#202D40" stroke-width="2">
+            <g transform="translate(244.000000, 363.000000)">
+                <g id="Common-Icons/Direction-Down" transform="translate(8.000000, 14.000000)">
+                    <polyline id="direction-right" points="6.5 11 9.5 8 6.5 5"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,240 @@
+@font-height: 38px;
+@line-height: @font-height - 4px;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  font-family: sans-serif;
+}
+
+.tree-node-title {
+  min-width: 64px;
+  flex: 1 0 auto;
+  display: block;
+  position: relative;
+  height: @font-height;
+  line-height: @font-height;
+}
+
+.tree-node-title-content {
+  user-select:none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  user-select: none;
+  border-top: 2px solid rgba(0,0,0,0);
+  border-bottom: 2px solid rgba(0,0,0,0);
+  line-height: @line-height;
+}
+
+.tree-node:first-child {
+  position: unset;
+}
+
+.tree-node {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  height: 38px;
+  width: 100%;
+}
+
+.tree-node-link:hover {
+  color: #455166;
+  background-color: #f2f4f6;
+}
+
+.tree-node-link:hover .tree-node-operations {
+  display: flex;
+}
+
+.tree-node-link .tree-node-operations {
+  display: none;
+}
+
+.tree-node-operations {
+  line-height: 34px;
+  user-select: none;
+  //transition: opacity .3s;
+  flex: 0 0 auto;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 4px;
+  opacity: 1;
+}
+
+.tree-node-drop-item {
+  flex: 1 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 38px;
+}
+
+.tree-node-link {
+  flex: 1 1 auto;
+  cursor: pointer;
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  color: #455166;
+  background-color: #fff;
+  border: 2px solid transparent;
+  transition: color .3s, background-color .3s;
+}
+
+.active .tree-node-link {
+  font-weight: 700;
+  color: #06f;
+  background-color: #ebf3ff;
+}
+
+.active .tree-node-operations {
+  display: flex;
+}
+
+.recycle-icon {
+  //background: 50% url("~@/assets/svgIcons/trash-default.svg") no-repeat !important;
+}
+
+.tree-icon {
+  background: 50% url("~@/assets/svgIcons/direction-right-default.svg") no-repeat;
+  width: 20px;
+  display: flex;
+  margin-top: 4px;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 20px;
+  opacity: .3;
+  transform: rotate(90deg);
+  transition: opacity .3s, transform .3s;
+  cursor: pointer;
+}
+
+.collapsed {
+  transform: none;
+}
+
+.active .tree-icon {
+  background-image: url("~@/assets/svgIcons/direction-right.svg");
+}
+
+.active.no-child .tree-icon {
+  background-image: url("~@/assets/svgIcons/dot.svg");
+}
+
+.no-child .tree-icon {
+  background-image: url("~@/assets/svgIcons/dot-default.svg");
+}
+
+.operation-icon {
+  width: 22px;
+  font-size: 14px;
+}
+
+.operation-icon:hover {
+  color: #000000;
+}
+
+.drag-group {
+  margin-left: 1px;
+}
+
+.footer-group {
+  margin-left: 1px;
+  user-select: none;
+}
+
+.ghost-node {
+  opacity: 1;
+}
+
+.ghost-node .tree-node-link {
+  color: #455166;
+  background-color: #f2f4f6;
+}
+
+.parent-node .tree-node-link {
+  border: 2px #06f solid;
+}
+
+.on-drag {
+  opacity: 0.1 !important;
+}
+
+.wiki-tree-drop-indicator {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-color: #06f;
+  pointer-events: none;
+}
+
+.drop-indicator-inside-red {
+  background-color: rgba(255,0,0,0.3) ;
+  border: 2px solid red !important;
+}
+
+.drop-indicator-inside {
+  display: block;
+  z-index: 1;
+  border: 2px solid #06f;
+}
+
+.drop-indicator-up {
+  display: block;
+  z-index: 1;
+}
+
+.drop-indicator-down {
+  display: block;
+  z-index: 1;
+  padding-top: 34px;
+}
+
+.drop-indicator-none {
+  display: none;
+}
+
+.wiki-tree-drop-indicator-line:before {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-color: inherit;
+  z-index: 1;
+  box-sizing: border-box;
+  margin: -1px 20px -1px 0;
+  border-width: 2px 0 0;
+}
+
+.wiki-tree-drop-indicator-line:after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-color: inherit;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 6px;
+  height: 6px;
+  border-width: 2px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: translate(-50%,-50%);
+}
+
+.indicate-span {
+  * {
+    pointer-events: none;
+    user-select: none;
+  }
+}
