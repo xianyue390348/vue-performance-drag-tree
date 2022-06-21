@@ -2,15 +2,46 @@
   "name": "vue-performance-drag-tree",
   "version": "0.1.0",
   "private": true,
+  "description": "基于Vue3 实现的课拖拽树,样式上模仿coding的文档管理",
+  "author": "xianyue <xianyue390348@163.com>",
+  "main": "lib/vue-performance-drag-tree.vue",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/@xianyue390348" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xianyue390348/vue-performance-drag-tree.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xianyue390348/vue-performance-drag-tree/issues"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "start": "vue-cli-service build --target lib --name vue-performance-drag-tree --dest lib src/index.js --watch",
+    "build": "vue-cli-service build --target lib --name vue-performance-drag-tree --dest lib src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "vue-performance-drag-tree",
+    "vue-drag",
+    "drag",
+    "drop",
+    "tree",
+    "vue",
+    "vue-components",
+    "vuedragtree",
+    "dragdrop",
+    "drag and drop",
+    "draganddrop"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/xianyue390348/vue-performance-drag-tree#readme",
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.11",
     "@vue/cli-plugin-eslint": "~4.5.11",
