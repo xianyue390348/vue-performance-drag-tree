@@ -26,9 +26,9 @@ export default {
       let count = 1
 
       let data = _.cloneDeep(mockData)
-      for(let i=0;i<10;i++) {
-        data = data.concat(_.cloneDeep(data))
-      }
+      // for(let i=0;i<10;i++) {
+      //   data = data.concat(_.cloneDeep(data))
+      // }
 
       iterateTree({id: 0, children: data}, (node, dep, brotherTree, parent)=>{
         faker.setLocale("zh_CN");//默认英文
@@ -75,6 +75,8 @@ export default {
 .tree-wrap {
   width: 40vw !important;
   height: 80vh !important;
+  border-radius: 4px;
+  overflow: hidden;
 }
 ::-webkit-scrollbar-track
 {

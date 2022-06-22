@@ -18,6 +18,7 @@
         v-bind="$attrs"
         :is-node-expend="isNodeExpend(item)"
         :is-alive-node="isNodeAlive(item)"
+        :style="isNodeAlive(item) ? 'z-index: 9999' : ''"
         :operations="[]">
       </draggable-node>
     </RecycleScroller>
@@ -359,4 +360,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="less">
+.vue-recycle-scroller__item-view:hover {
+  z-index: 5;
+}
+</style>
