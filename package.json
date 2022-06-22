@@ -17,8 +17,9 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "start": "vue-cli-service build --target lib --name vue-performance-drag-tree --dest lib src/index.js --watch",
-    "build": "vue-cli-service build --target lib --name vue-performance-drag-tree --dest lib src/index.js",
+    "build": "vue-cli-service build",
+    "start": "vue-cli-service build --target lib --name vue-performance-drag-tree --dest lib src/lib.js --watch",
+    "build-lib": "vue-cli-service build --target lib --name vue-performance-drag-tree --dest lib src/lib.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
